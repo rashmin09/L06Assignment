@@ -23,9 +23,25 @@
                 color: #fff;
             }
             .columns {
-                padding: 60px;
-                height: 200px;
-                border: 1px solid #000000;
+                margin-left: 125px;
+                margin-top: 10px;
+                height: 80px;
+            }
+            .description {
+                font-size: 20px;
+            }
+            .icon-container {
+                display: flex;
+                align-items: center;
+            }
+            .icon-container i {
+                margin-right: 10px;
+            }
+            .icon-container div {
+                flex-grow: 1;
+            }
+            .icon-container h2, .icon-container p {
+                margin: 0;
             }
             .fc {
                 font-size: 45px;
@@ -35,9 +51,6 @@
             .cards-section {
                 background: linear-gradient(to bottom, #87CEFA, #3498db);
                 padding: 100px;
-            }
-            .description {
-                font-size: 25px;
             }
             .card {
                 border: 1px solid #000000;
@@ -105,16 +118,31 @@
         <div class="columns">
             <div class="row">
                 <div class="col-md-4">
-                    <h2><i class="fa-solid fa-laptop" style="color: #000000;"></i> 158 online courses</h2>
-                    <p class="description">Enjoy a variety of fresh topics</p>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-laptop" style="color: #000000; font-size: 2rem;"></i>
+                        <div>
+                            <h2>158 online courses</h2>
+                            <p class="description">Enjoy a variety of fresh topics</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h2><i class="fa-solid fa-person-chalkboard" style="color: #000000;"></i> Expert instruction</h2>
-                    <p class="description">Find the right instructor for you</p>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-person-chalkboard" style="color: #000000; font-size: 2rem;"></i>
+                        <div>
+                            <h2>Expert instruction</h2>
+                            <p class="description">Find the right instructor for you</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h2><i class="fa-solid fa-infinity" style="color: #000000;"></i> Lifetime access</h2>
-                    <p class="description">Learn on your schedule</p>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-infinity" style="color: #000000; font-size: 2rem;"></i>
+                        <div>
+                            <h2>Lifetime access</h2>
+                            <p class="description">Learn on your schedule</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
