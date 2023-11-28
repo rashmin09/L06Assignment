@@ -23,9 +23,12 @@
                 color: #fff;
             }
             .columns {
-                margin-left: 125px;
-                margin-top: 10px;
-                height: 80px;
+                padding: 200px;
+                margin-top: -185px;
+                margin-bottom: -185px;
+            }
+            .description-header {
+                font-size: 25px;
             }
             .description {
                 font-size: 20px;
@@ -57,13 +60,16 @@
             }
             .card-img-top {
                 border-bottom: 1px solid #000000;
+                object-fit: cover;
+                width: 100%;
+                height: 200px; 
             }
-            @media (min-width: 767px) and (max-width: 768px) {
+            @media (max-width: 768px) {
                 .col-md-7 {
                     padding: 60px;
                 }
                 .hero-section {
-                    height: 878px;
+                    height: 254px;
                 }
                 .hero-image {
                     width: 100%;
@@ -71,45 +77,60 @@
                     max-width: 100%;
                     max-height: 100%;
                 }
-                .columns {
-                    height: auto;
+                .description-header {
+                    font-size: 14px;
                 }
-                .columns .col-md-4 {
-                    max-width: 100%;
-                }
-                .icon-container {
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                }
-                .icon-container i {
-                    margin-right: 0;
-                }navbar-collapse {
-                    background-color: #343a40;
-                }
-            }
-            @media (min-width: 480px) and (max-width: 480px) {
-                .col-md-7 {
-                    padding: 60px;
-                }
-                .navbar-collapse {
-                    background-color: #343a40;
-                }
-                .hero-section {
-                    height: 668px;
-                }
-                .hero-image {
-                    width: 100%;
-                    height: auto;
-                    max-width: 100%;
-                    max-height: 100%;
+                .description {
+                    font-size: 12px;
                 }
                 .columns {
-                    height: auto;
+                    padding: 0px;
+                    height: 500px;
+                    margin-top: 15px;
+                    margin-bottom: -450px;
                     margin-left: 20px;
                 }
-                .columns .col-md-4 {
+                .icon-container {
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                }
+                .icon-container i {
+                    margin-right: 0;
+                }
+                navbar-collapse {
+                    background-color: #343a40;
+                }
+                .card-img-top {
+                    height: 200px;
+                }
+            }
+            @media (min-width: 424px) and (max-width: 425px) {
+                .col-md-7 {
+                    padding: 60px;
+                }
+                .hero-section {
+                    height: 621.8px;
+                }
+                .hero-image {
+                    width: 100%;
+                    height: auto;
                     max-width: 100%;
+                    max-height: 100%;
+                    margin-left: 80px;
+                }
+                .description-header {
+                    font-size: 14px;
+                }
+                .description {
+                    font-size: 12px;
+                }
+                .columns {
+                    padding: 0px;
+                    height: 570px;
+                    margin-top: 15px;
+                    margin-bottom: -450px;
+                    margin-left: 20px;
                 }
                 .icon-container {
                     display: flex;
@@ -119,8 +140,14 @@
                 .icon-container i {
                     margin-right: 0;
                 }
+                navbar-collapse {
+                    background-color: #343a40;
+                }
+                .card-img-top {
+                    height: 150px;
+                }
                 .fc {
-                    font-size: 36px;
+                    font-size: 32px;
                 }
             }
         </style>
@@ -186,7 +213,7 @@
                     <div class="icon-container">
                         <i class="fa-solid fa-laptop" style="color: #000000; font-size: 2rem;"></i>
                         <div>
-                            <h2>158 online courses</h2>
+                            <h2 class="description-header">158 online courses</h2>
                             <p class="description">Enjoy a variety of fresh topics</p>
                         </div>
                     </div>
@@ -195,7 +222,7 @@
                     <div class="icon-container">
                         <i class="fa-solid fa-person-chalkboard" style="color: #000000; font-size: 2rem;"></i>
                         <div>
-                            <h2>Expert instruction</h2>
+                            <h2 class="description-header">Expert instruction</h2>
                             <p class="description">Find the right instructor for you</p>
                         </div>
                     </div>
@@ -204,7 +231,7 @@
                     <div class="icon-container">
                         <i class="fa-solid fa-infinity" style="color: #000000; font-size: 2rem;"></i>
                         <div>
-                            <h2>Lifetime access</h2>
+                            <h2 class="description-header">Lifetime access</h2>
                             <p class="description">Learn on your schedule</p>
                         </div>
                     </div>
@@ -214,45 +241,48 @@
 
         <!-- Cards Section -->
         <div class="cards-section">
-            <p class="fc">Featured Courses</p>
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="Images/CourseImage1.jpg" class="card-img-top" alt="Course Image 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Introduction to HTML and CSS</h5>
-                            <p class="card-text">2h 30m</p>
-                            <p class="card-text">Hannah Lim</p>
+            <div class="container">
+                <p class="fc">Featured Courses</p>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <img src="Images/CourseImage1.jpg" class="card-img-top" alt="Course Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Introduction to HTML and CSS</h5>
+                                <p class="card-text">2h 30m</p>
+                                <p class="card-text">Hannah Lim</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="Images/CourseImage2.jpg" class="card-img-top" alt="Course Image 2">
-                        <div class="card-body">
-                            <h5 class="card-title">User Experience and Interface Design</h5>
-                            <p class="card-text">2h 45m</p>
-                            <p class="card-text">Julia Lee</p>
+                    <!-- Repeat the structure for other cards -->
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <img src="Images/CourseImage2.jpg" class="card-img-top" alt="Course Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">User Experience and Interface Design</h5>
+                                <p class="card-text">2h 45m</p>
+                                <p class="card-text">Julia Lee</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="Images/CourseImage3.jpg" class="card-img-top" alt="Course Image 3">
-                        <div class="card-body">
-                            <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
-                            <p class="card-text">4h 30m</p>
-                            <p class="card-text">Ryan Low</p>
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <img src="Images/CourseImage3.jpg" class="card-img-top" alt="Course Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
+                                <p class="card-text">4h 30m</p>
+                                <p class="card-text">Ryan Low</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="Images/CourseImage4.jpg" class="card-img-top" alt="Course Image 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Front-end JavaScript Frameworks</h5>
-                            <p class="card-text">3h 45m</p>
-                            <p class="card-text">Azhar Kamar</p>
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <img src="Images/CourseImage4.jpg" class="card-img-top" alt="Course Image 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Front-end JavaScript Frameworks</h5>
+                                <p class="card-text">3h 45m</p>
+                                <p class="card-text">Azhar Kamar</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -271,3 +301,6 @@
                 </div>
             </div>
         </footer>
+
+    </body>
+</html>
